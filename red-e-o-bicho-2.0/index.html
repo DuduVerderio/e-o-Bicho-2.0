@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RED - É o Bicho 2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1440, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    
+    
+        <script src="assets.js" defer></script>
+    
+
+    
+    <style>
+        .stage-container.not-ready{
+            visibility: hidden;
+            opacity: 0;
+        }
+        body.not-ready{
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
+<link href="app.css" rel="stylesheet"></head>
+<body class="not-ready" ng-controller="ApplicationCtrl as app">
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="loading-screen">
+        <div class="logo-loading"><img ng-src="{{$root.introLogo}}"></div>
+        <!-- <div class="logo-loading"></div> -->
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="stage-container" class="stage-container not-ready">
+        <div ui-view></div>
+    </div>
+<script type="text/javascript" src="app.js"></script></body>
+</html>
